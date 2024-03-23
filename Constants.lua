@@ -11,6 +11,8 @@ XiconPlateBuffs.trackedCrowdControl = {
         [GetSpellInfo(8042)] = {duration = 2, id = 8042, track = "debuff", texture = select(3, GetSpellInfo(8042))}, -- Earth Shock (Shaman)
         [GetSpellInfo(19244)] = {duration = 5, id = 1, track = "debuff", texture = select(3, GetSpellInfo(19244))}, -- Spell Lock (Warlock
         [GetSpellInfo(32747)] = {duration = 3, id = 32747, track = "debuff", texture = select(3, GetSpellInfo(32747))}, -- Deadly Throw Interrupt
+		[GetSpellInfo(1543)] = {duration = 20, id = 1543, track = "debuff", texture = select(3, GetSpellInfo(1543))}, -- flare
+		[GetSpellInfo(26573)] = {duration = 8, id = 26573, track = "debuff", texture = select(3, GetSpellInfo(26573))}, -- concecration
     },
     ["shortinterrupts"] = {
         --Shaman
@@ -28,6 +30,7 @@ XiconPlateBuffs.trackedCrowdControl = {
         [GetSpellInfo(10326)] = true, -- Turn Evil
     },
 
+-- Druid
     -- Cyclone
     [GetSpellInfo(33786)] = {
         track = "debuff",
@@ -102,6 +105,7 @@ XiconPlateBuffs.trackedCrowdControl = {
     },
 
 
+-- Hunter
     -- Freezing Trap Effect
     [GetSpellInfo(14309)] = {
         track = "debuff",
@@ -172,6 +176,7 @@ XiconPlateBuffs.trackedCrowdControl = {
     },
 
 
+-- Mage
     -- Polymorph
     [GetSpellInfo(12826)] = {
         track = "debuff",
@@ -239,6 +244,7 @@ XiconPlateBuffs.trackedCrowdControl = {
     },
 
 
+-- Paladin
     -- Hammer of Justice
     [GetSpellInfo(10308)] = {
         track = "debuff",
@@ -283,6 +289,8 @@ XiconPlateBuffs.trackedCrowdControl = {
         id = 642,
     },
 
+
+-- Priest
     -- Psychic Scream
     [GetSpellInfo(8122)] = {
         track = "debuff",
@@ -337,6 +345,8 @@ XiconPlateBuffs.trackedCrowdControl = {
         id = 33206,
     },
 
+
+-- Rogue
     -- Sap
     [GetSpellInfo(6770)] = {
         track = "debuff",
@@ -408,6 +418,8 @@ XiconPlateBuffs.trackedCrowdControl = {
         id = 31224,
     },
 
+
+-- Warlock
     -- Fear
     [GetSpellInfo(5782)] = {
         track = "debuff",
@@ -474,6 +486,7 @@ XiconPlateBuffs.trackedCrowdControl = {
     --]]
 
 
+-- Warrior
     -- Intimidating Shout
     [GetSpellInfo(5246)] = {
         track = "debuff",
@@ -553,6 +566,9 @@ XiconPlateBuffs.trackedCrowdControl = {
         spellSchool = "physical",
         id = 34510,
     },
+	
+
+-- Racials
     -- War Stomp
     [GetSpellInfo(20549)] = {
         track = "debuff",
@@ -568,5 +584,640 @@ XiconPlateBuffs.trackedCrowdControl = {
         priority = 15,
         spellSchool = "magic",
         id = 28730,
+    },
+	
+-------------------------------- New spells
+-- Druid
+    -- Starfire Stun
+    [GetSpellInfo(16922)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 30,
+        spellSchool = "physical",
+        id = 16922,
+    },
+
+    -- Barkskin
+    [GetSpellInfo(22812)] = {
+        track = "buff",
+        duration = 12,
+        priority = 10,
+        spellSchool = "magic",
+        id = 22812,
+    },
+
+    -- Nature's Grasp
+    [GetSpellInfo(27009)] = {
+        track = "buff",
+        duration = 45,
+        priority = 10,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 27009,
+    },
+
+    -- Nature's Swiftness
+    [GetSpellInfo(17116)] = {
+        track = "buff",
+        duration = 6600,
+        priority = 40,
+        spellSchool = "magic",
+        id = 17116,
+    },
+
+	-- Tranquillity
+    [GetSpellInfo(26983)] = {
+        track = "buff",
+        duration = 8,
+        priority = 30,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 26983,
+    },
+
+	-- Soothe Animal
+    [GetSpellInfo(9901)] = {
+        track = "debuff",
+        duration = 15,
+        priority = 20,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 9901,
+    },
+	
+	
+-- Hunt
+     -- Deterrence
+     [GetSpellInfo(19263)] = {
+        track = "buff",
+        duration = 10,
+        priority = 40,
+        spellSchool = "physical",
+        id = 19263,
+    },
+
+    -- Counterattack
+    [GetSpellInfo(27067)] = {
+        track = "debuff",
+        duration = 5,
+        priority = 30,
+        spellSchool = "physical",
+        root = true,
+        id = 27067,
+    },
+
+    -- Entrapment 
+    [GetSpellInfo(19388)] = {
+        track = "debuff",
+        duration = 4,
+        priority = 30,
+        spellSchool = "physical",
+        root = true,
+        id = 19388,
+    },
+
+    -- Improved Concussive Shot
+    [GetSpellInfo(19410)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 30,
+        spellSchool = "physical",
+        id = 19410,
+    },
+
+
+-- Mage
+    -- Icy Veins
+    [GetSpellInfo(12472)] = {
+        track = "buff",
+        duration = 20,
+        priority = 20,
+        spellSchool = "magic",
+        id = 12472,
+    },
+
+    -- Arcane Power
+    [GetSpellInfo(12042)] = {
+        track = "buff",
+        duration = 15,
+        priority = 20,
+        spellSchool = "magic",
+        id = 12042,
+    },
+
+    -- Fire Ward
+    [GetSpellInfo(543)] = {
+        track = "buff",
+        duration = 30,
+        priority = 20,
+        spellSchool = "magic",
+        id = 543,
+    },
+
+    -- Frost Ward
+    [GetSpellInfo(6143)] = {
+        track = "buff",
+        duration = 30,
+        priority = 20,
+        spellSchool = "magic",
+        id = 6143,
+    },
+
+    -- Presence of Mind
+    [GetSpellInfo(12043)] = {
+        track = "buff",
+        duration = 6600,
+        priority = 40,
+        spellSchool = "magic",
+        id = 12043,
+    },
+
+
+    --  Blazing speed
+    [GetSpellInfo(31641)] = {
+        track = "buff",
+        duration = 8,
+        priority = 20,
+        spellSchool = "magic",
+        id = 31641,
+    },
+
+    --  Invisibility
+    [GetSpellInfo(66)] = {
+        track = "buff",
+        duration = 6,
+        priority = 20,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 66,
+    },
+
+    --  Evocation
+    [GetSpellInfo(12051)] = {
+        track = "buff",
+        duration = 8,
+        priority = 20,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 12051,
+    },
+
+    --  Slow
+    [GetSpellInfo(6146)] = {
+        track = "debuff",
+        duration = 15,
+        priority = 30,
+        spellSchool = "magic",
+        id = 6146,
+    },
+
+    --  Impact
+    [GetSpellInfo(12355)] = {
+        track = "debuff",
+        duration = 2,
+        priority = 30,
+        spellSchool = "physical",
+        id = 12355,
+    },
+	
+	
+-- Paladin
+    --  Blessing of Sacrifice
+    [GetSpellInfo(6940)] = {
+        track = "buff",
+        duration = 30,
+        priority = 10,
+        spellSchool = "magic",
+        id = 6940,
+    },
+
+   --  Avenging Wrath
+    [GetSpellInfo(31884)] = {
+        track = "buff",
+        duration = 20,
+        priority = 30,
+        spellSchool = "magic",
+        id = 31884,
+    },
+
+
+    --  Turn Undead
+    [GetSpellInfo(5627)] = {
+        track = "debuff",
+        duration = 15,
+        priority = 30,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 5627,
+    },
+
+    --  Turn Evil
+    [GetSpellInfo(10326)] = {
+        track = "debuff",
+        duration = 20,
+        priority = 30,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 10326,
+    },
+
+
+-- Priest 
+	--  Fear ward
+    [GetSpellInfo(6346)] = {
+        track = "buff",
+        duration = 180,
+        priority = 30,
+        spellSchool = "magic",
+        id = 6346,
+    },
+
+	-- Power infusion
+    [GetSpellInfo(10060)] = {
+        track = "buff",
+        duration = 15,
+        priority = 30,
+        spellSchool = "magic",
+        id = 10060,
+    },
+
+    --  Shackle undead
+    [GetSpellInfo(10955)] = {
+        track = "debuff",
+        duration = 50,
+        priority = 30,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 10955,
+    },
+
+    --  Mind Soothe
+    [GetSpellInfo(25596)] = {
+        track = "debuff",
+        duration = 15,
+        priority = 30,
+        spellSchool = "magic",
+        onDamage = true,
+        id = 25596,
+    },
+
+
+-- Rogue
+  --  Evasion
+    [GetSpellInfo(5277)] = {
+        track = "buff",
+        duration = 15,
+        priority = 30,
+        spellSchool = "physical",
+        id = 5277,
+    },
+
+    --  Expose armor
+    [GetSpellInfo(26866)] = {
+        track = "debuff",
+        duration = 30,
+        priority = 20,
+        spellSchool = "physical",
+        id = 26866,
+    },
+	
+	
+-- Warlock
+	--  Backlash
+    [GetSpellInfo(34938)] = {
+        track = "buff",
+        duration = 8,
+        priority = 30,
+        spellSchool = "physical",
+        id = 34938,
+    },
+
+	--  Shadow trance
+    [GetSpellInfo(17941)] = {
+        track = "buff",
+        duration = 10,
+        priority = 30,
+        spellSchool = "magic",
+        id = 17941,
+    },
+
+	--  Fel domination
+    [GetSpellInfo(18708)] = {
+        track = "buff",
+        duration = 15,
+        priority = 30,
+        spellSchool = "magic",
+        id = 18708,
+    },
+
+	--  Shadow ward
+    [GetSpellInfo(28610)] = {
+        track = "buff",
+        duration = 30,
+        priority = 30,
+        spellSchool = "magic",
+        id = 28610,
+    },
+
+	--  Nether protection 
+    [GetSpellInfo(30302)] = {
+        track = "buff",
+        duration = 4,
+        priority = 30,
+        spellSchool = "physical",
+        id = 30302,
+    },
+
+	--  Sacrifice 
+    [GetSpellInfo(27273)] = {
+        track = "buff",
+        duration = 30,
+        priority = 30,
+        spellSchool = "magic",
+        id = 27273,
+    },
+
+	--  Bannish
+    [GetSpellInfo(18647)] = {
+        track = "debuff",
+        duration = 30,
+        priority = 20,
+        spellSchool = "magic",
+        id = 18647,
+    },
+
+	--  Curse of Tongues
+    [GetSpellInfo(1714)] = {
+        track = "debuff",
+        duration = 30,
+        priority = 20,
+        spellSchool = "curse",
+        id = 1714,
+    },
+
+	--  Pyroclasm
+    [GetSpellInfo(18073)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 20,
+        spellSchool = "physical",
+        id = 18073,
+    },
+
+	--  Curse of Exhaustion
+    [GetSpellInfo(18223)] = {
+        track = "debuff",
+        duration = 12,
+        priority = 15,
+        spellSchool = "curse",
+        id = 18223,
+    },
+
+
+
+-- Warrior
+	--  Intervene 
+    [GetSpellInfo(3411)] = {
+        track = "buff",
+        duration = 10,
+        priority = 20,
+        spellSchool = "physical",
+        id = 3411,
+    },
+
+	--  Spell reflection
+    [GetSpellInfo(23920)] = {
+        track = "buff",
+        duration = 5,
+        priority = 20,
+        spellSchool = "physical",
+        id = 23920,
+    },
+
+	--  Death wish
+    [GetSpellInfo(12292)] = {
+        track = "buff",
+        duration = 30,
+        priority = 20,
+        spellSchool = "physical",
+        id = 12292,
+    },
+
+	--  Berserker rage
+    [GetSpellInfo(18499)] = {
+        track = "buff",
+        duration = 10,
+        priority = 20,
+        spellSchool = "physical",
+        id = 18499,
+    },
+
+	--  Last stand
+    [GetSpellInfo(12975)] = {
+        track = "buff",
+        duration = 20,
+        priority = 20,
+        spellSchool = "physical",
+        id = 12975,
+    },
+
+	--  Retaliation
+    [GetSpellInfo(20230)] = {
+        track = "buff",
+        duration = 15,
+        priority = 20,
+        spellSchool = "physical",
+        id = 20230,
+    },
+	--  Recklessness
+    [GetSpellInfo(1719)] = {
+        track = "buff",
+        duration = 15,
+        priority = 20,
+        spellSchool = "physical",
+        id = 1719,
+    },
+
+	--  Disarm
+    [GetSpellInfo(676)] = {
+        track = "debuff",
+        duration = 10,
+        priority = 20,
+        spellSchool = "physical",
+        id = 676,
+    },
+
+	--  Shield bash - silenced
+    [GetSpellInfo(18498)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 20,
+        spellSchool = "physical",
+        id = 18498,
+    },
+
+	--  Revenge Stun
+    [GetSpellInfo(12798)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 20,
+        spellSchool = "physical",
+        id = 12798,
+    },
+	
+	
+-- Shaman
+	--  Bloodlust
+    [GetSpellInfo(2825)] = {
+        track = "buff",
+        duration = 40,
+        priority = 20,
+        spellSchool = "magic",
+        id = 2825,
+    },
+
+	--  Heroism
+    [GetSpellInfo(32182)] = {
+        track = "buff",
+        duration = 40,
+        priority = 20,
+        spellSchool = "magic",
+        id = 32182,
+    },
+
+	--  Nature's Swiftness
+    [GetSpellInfo(16188)] = {
+        track = "buff",
+        duration = 6600,
+        priority = 40,
+        spellSchool = "magic",
+        id = 16188,
+    },
+
+	--[[
+	--  Grounding totem effect
+    ["Grounding Totem Effect"] = {
+        track = "buff",
+        duration = 45,
+        priority = 40,
+        spellSchool = "physical",
+        onDamage = true,
+        id = 8178,
+    },
+	]]
+	
+	--  Shamanistic Rage
+    [GetSpellInfo(30823)] = {
+        track = "buff",
+        duration = 15,
+        priority = 20,
+        spellSchool = "physical",
+        id = 30823,
+    },
+
+	--  Elemental Mastery
+    [GetSpellInfo(16166)] = {
+        track = "buff",
+        duration = 6600,
+        priority = 20,
+        spellSchool = "magical",
+        id = 16166,
+    },
+
+   --  Stoneclaw Stun
+    [GetSpellInfo(39796)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 20,
+        spellSchool = "physical",
+        id = 39796,
+    },
+	
+	
+-- Racials
+	--  Will of the Forsaken
+    [GetSpellInfo(7744)] = {
+        track = "buff",
+        duration = 5,
+        priority = 20,
+        spellSchool = "physical",
+        id = 7744,
+    },
+
+
+	--  Stoneform
+    [GetSpellInfo(20594)] = {
+        track = "buff",
+        duration = 8,
+        priority = 20,
+        spellSchool = "physical",
+        id = 20594,
+    },
+
+	--  Perception
+    [GetSpellInfo(20600)] = {
+        track = "buff",
+        duration = 20,
+        priority = 20,
+        spellSchool = "physical",
+        id = 20600,
+    },
+	
+
+-- Items
+	--  Living Free Action (potion)
+    [GetSpellInfo(24364)] = {
+        track = "buff",
+        duration = 5,
+        priority = 20,
+        spellSchool = "physical",
+        id = 24364,
+    },
+
+	--  Free Action (potion)
+    [GetSpellInfo(6615)] = {
+        track = "buff",
+        duration = 30,
+        priority = 20,
+        spellSchool = "physical",
+        id = 6615,
+    },
+
+	--  Adamantite Grenade
+    [GetSpellInfo(30217)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 20,
+        spellSchool = "physical",
+        onDamage = true,
+        id = 30217,
+    },
+
+	--  Fel Iron Bomb
+    [GetSpellInfo(30216)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 20,
+        spellSchool = "physical",
+        onDamage = true,
+        id = 30216,
+    },
+
+	--  Netherweave Net
+    [GetSpellInfo(31367)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 20,
+        spellSchool = "physical",
+        id = 31367,
+    },
+
+	--  Heavy Netherweave Net
+    [GetSpellInfo(31368)] = {
+        track = "debuff",
+        duration = 3,
+        priority = 20,
+        spellSchool = "physical",
+        id = 31368,
     },
 }

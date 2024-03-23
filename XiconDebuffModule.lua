@@ -682,6 +682,26 @@ function events:COMBAT_LOG_EVENT_UNFILTERED(...)
             updateDebuffsOnUnitGUID(dstGUID)
         end
     end
+	
+	if eventType == "SPELL_CAST_SUCCESS" then
+	if spellID == 26573 or spellID == 1543 then
+        name = string.gsub(srcName, "%s+", "")
+        if (trackedCC.interrupts[spellName] and XPB.db.profile.enableInterruptIcons) then
+            local multiplier = 1
+            if trackedCC.shortinterrupts[extraSpellName] then
+                multiplier = 0.7
+            end
+            XiconDebuffModule:addDebuff(name, srcGUID,
+                    trackedCC.interrupts[spellName].id,
+                    trackedCC.interrupts[spellName].duration * multiplier,
+                    true,
+                    getSpellSchool(extraSchool),
+                    trackedCC.interrupts[spellName].texture)
+            updateDebuffsOnUnitGUID(srcGUID)
+        end
+    end
+	end
+		
     --print(eventType .. " - " .. (dstName and dstName.." dst" or srcName and srcName.." src"))
     if dstIsEnemy and (trackedCC[spellName]) then
         --print(eventType .. " - " ..spellName)
